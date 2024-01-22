@@ -1,0 +1,65 @@
+*{
+    font: sans serif;
+}
+.flex-container {
+    display: flex;
+    align-items: center;
+}
+
+.flex-container header {
+    margin-right: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 30%;
+    border: 2px double white; 
+    margin-top: 50px;
+    border-spacing: 5px; 
+    }
+
+    td, th {
+        border: 2px double black; /* Double border for each cell */
+        padding: 5px; /* Optional: for padding inside each cell */
+    }
+
+
+
+td, th {
+    border: 2px double black; 
+    padding: 5px;
+} 
+
+th, td {
+    border: 1px solid white; 
+    padding: 5px; 
+}
+
+body {
+    background-color: black;
+    color: white; 
+    font-style: sans-serif;
+}
+
+#name {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+
+#radio {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#color {
+    color: blue;
+    color: green;
+    color: red;
+    color: purple;
+}
+
+.submit-button {
+    margin-top: 10px;
+    
+}
