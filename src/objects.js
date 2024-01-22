@@ -128,12 +128,7 @@ function wordCount(str) {
 //   => true
 function isBugAvailable(bug, month) {
  
-  if (bug && bug.availability && Array.isArray(bug.availability.months)) {
-      
-      return bug.availability.months.includes(month);
-  } else {
-    return false;
-  }
+  return bug.availability.months.includes(month);
   
   
 }
@@ -181,18 +176,18 @@ function isBugAvailable(bug, month) {
 //   }
 
 function buildBugHuntCalendar(bugs) {
-  let calendar = { 
+  let bugMonths = { 
       1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 
       7: [], 8: [], 9: [], 10: [], 11: [], 12: []
   };
 
-  bugs.forEach(bug => {
-      bug.availability.months.forEach(month => {
-          calendar[month].push(bug.name); 
-      });
-  });
+  for (const bug of bugs) {
+    for (const month of bug.availability.months) {
+      bugMonths[month].push(bug.name);
+    }
+  }
 
-  return calendar;
+  return bugMonths;
 }
 
 export {
